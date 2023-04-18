@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Image Buttons</title>
+    
+	<style>
+		html{
+            scroll-behavior: smooth;
+        }
+		.button-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.button {
+			position: relative;
+			margin: 10px;
+			overflow: hidden;
+			border-radius: 5px;
+		}
+
+		.button img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform .2s ease;
+		}
+
+		.button:hover img {
+			transform: scale(1.1);
+		}
+
+		.button:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.5);
+			opacity: 0;
+			transition: opacity .2s ease;
+		}
+
+		.button:hover:before {
+			opacity: 1;
+		}
+
+		.button a {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			color: #fff;
+			text-decoration: none;
+			font-size: 20px;
+			font-weight: bold;
+			opacity: 0;
+			transition: opacity .2s ease;
+		}
+
+		.button:hover a {
+			opacity: 1;
+		}
+
+		@media (max-width: 768px) {
+			.button {
+				flex-basis: 50%;
+			}
+		}
+
+        .endorahead{
+            background-color: #FFCA08;
+            
+        }
+
+		/* Set the height of the section to 100% of the viewport height */
+.bg-image {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center the content within the section */
+.container {
+  max-width: 800px;
+  text-align: center;
+  color:#fff;
+  padding: 20px;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .bg-image {
+    height: auto;
+    min-height: 500px;
+  }
+}
+
+.hack{
+	color: #FFCA08;
+}
+
+
+.section {
+  background-image: url("hackathon.png");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+}
+
+.section-content {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.section-content h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.section-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn {
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #eceae4;
+  background-color: #FFCA08;
+  border: none;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #e6e4db;
+  color: #FFCA08;
+}
+
+
+      /* Set the preloader spinner */
+      #spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #FFCA08;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+      }
+
+      /* Define the spinner animation */
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+
+.events{
+	background-color: #FFCA08;
+	width: 100%;
+}
+
+.my-button {
+        background-color: #FFCA08;
+        /* Add any other button styles here */
+    }
+
+	</style>
+	<link rel="icon" href="ENDORA White PNG.png" type="image/gif" sizes="4x4">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+	<!--preloader-->
+	<div id="preloader">
+		<div id="spinner"></div>
+	  </div>
+	<!--preloader end-->
+<!--header start-->
+<section class="container">
+	<img id="animated-image" data-mdb-toggle="animation" src="ENDORA White PNG.png" alt="Animated Image" class="img-fluid" style="width: 100%;height: 700px;" >
+	<p style="color: #171716;">VIBE's IEDC fest(ENDORA) is a platform for budding entrepreneurs to showcase and sell their products. The event includes a job fair, a startup hub, tech-based stalls, entrepreneur talks, workshops, influencers meet and more. It also features an all-Kerala IEDC meet and a ramp walk for differently-abled individuals. Technical competitions and cultural events will also be held.</p>
+
+</section>
+<!--header end-->
+<!--workshops-->
+<section class="container">
+	<h1 style="text-align: center; color: #FFCA08;">Workshops</h1>
+	<div class="row">
+	  <div class="col-md-4">
+		<div class="button">
+			<img src="Ethical hacking.jpg" alt="Image 2" class="img-fluid" style="height: 300px;">
+			<a href="https://bit.ly/endora_ethhack"></a>
+		</div>
+		<!-- Item 1 content goes here -->
+	  </div>
+	  <div class="col-md-4">
+		<!-- Item 2 content goes here -->
+		<div class="button">
+			<img src="offroad.jpg" alt="Image 2" class="img-fluid" style="height: 300px;">
+			<a href="https://bit.ly/endora_offroad"></a>
+		</div>
+	  </div>
+	  <div class="col-md-4">
+		<!-- Item 3 content goes here -->
+		<div class="button">
+			<img src="embeded automotive.jpg" alt="Image 2" class="img-fluid" style="height: 300px;">
+			<a href="https://bit.ly/endora_emb_auto"></a>
+		</div>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="col-md-4">
+		<!-- Item 4 content goes here -->
+		<div class="button">
+			<img src="industrial automation.jpg" alt="Image 2" class="img-fluid" style="height: 300px;">
+			<a href="https://bit.ly/endora_ind_auto"></a>
+		</div>
+	  </div>
+	  <div class="col-md-4">
+		<!-- Item 5 content goes here -->
+		<div class="button">
+			<img src="flutter.jpg" alt="Image 2" class="img-fluid" style="height: 300px;">
+			<a href="https://bit.ly/endora_appdev"></a>
+		</div>
+	  </div>
+	  <div class="col-md-4">
+		<!-- Item 6 content goes here -->
+		<div class="button">
+			<img src="3d printing.jpg" alt="Image 2" class="img-fluid" style="height: 300px;">
+			<a href="https://bit.ly/endora_3dp"></a>
+		</div>
+	  </div>
+	</div>
+  </section>
+<!--worksops-->
+
+<!--hackathon-->
+<section class="section">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-6">
+		  <div class="section-content">
+			<h2 style="color:#FFCA08">Mega Hackathon</h2>
+			<div>
+				<p>in association with</p>
+			<img src="pngfind.com-gayatri-mata-png-6206361.png" class="img-fluid" style="height: 50px">
+		</div>
+		  </div>
+		</div>
+		<div class="col-md-6">
+		  <div class="section-image">
+			<a href="https:/bit.ly/endora_hackathon" class="btn ">Register here</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+
+  
+  
+
+<!--hackathon end-->
+
+<!--rampwalk start-->
+<section class="container events">
+	<img src="Main Brochure PDF-21024_4.jpg" class="img-fluid center" alt="Animated Image">
+<img src="Main Brochure PDF-21024_5.jpg" class="img-fluid" alt="Animated Image">
+</section>
+<!--rampwalk end-->
+  
+<script>
+	const animatedImage = document.getElementById("animated-image");
+
+function startAnimation() {
+  animatedImage.classList.add("animate");
+}
+
+startAnimation();
+/* preloader */
+window.addEventListener("load", function() {
+        const preloader = document.getElementById("preloader");
+        preloader.style.display = "none";
+      });
+
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20b42f38ff.js" crossorigin="anonymous"></script>
+</body>
+</html>
